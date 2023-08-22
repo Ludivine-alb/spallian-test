@@ -1,0 +1,26 @@
+/* loading-spaceship.css */
+
+.loading-bar-and-percentage {
+  display: flex;
+  align-items: center;
+}
+
+.loading-bar {
+  background-color: red;
+  height: 13px;
+  width: 100%;
+  transition: width 0.2s ease-in-out;
+}
+
+.loading-percentage {
+  margin-left: 10px; /* Ajustez la marge pour l'espacement */
+  padding-bottom: 4px;
+  position: absolute;
+  font-weight: bold;
+  font-size: small;
+}
+
+.loading-spaceship {
+  max-width: 100%;
+  height: auto;
+}

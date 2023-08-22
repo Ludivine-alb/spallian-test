@@ -1,0 +1,24 @@
+.characters-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement les éléments */
+    justify-content: flex-start; /* Centre verticalement les éléments */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 10vh;
+    padding-bottom: 10vh; /* Utilisez une hauteur de 100vh pour occuper toute la hauteur de l'écran */
+  }
+  
+  .characters-list-title {
+    margin-top: 16px;
+    padding-bottom: 10vh; /* Ajoute un espace entre l'icône et le titre */
+  }
+  
+  .card-list {
+    /* Ajoutez d'autres styles pour votre liste de personnages ici */
+  }
+  
+  .loading {
+    /* Styles pour le chargement */
+  }
+  
