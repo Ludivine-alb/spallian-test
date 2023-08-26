@@ -23,7 +23,7 @@ const LoadingSpaceship = () => {
             <div className="loading-bar" style={{ width: `${loadingPercentage}%` }}>
             <div className="loading-percentage">{loadingPercentage}%</div>
         </div>
-          {/* Loading progress bar */}
+       
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

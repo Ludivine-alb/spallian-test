@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import LoadingSpaceship from "./LoadingSpaceship";
+import CharacterCard from "./CharacterCard";
 import "../styles/components/characters-list.css";
-import "../styles/fonts.css";
 
 const CharactersList = () => {
     const [characters, setCharacters] = useState([]);
@@ -13,10 +12,10 @@ const CharactersList = () => {
     const [showLoadMore, setShowLoadMore] = useState(false);
 
     useEffect(() => {
-        fetchCharacters();
+        getCharacters();
     }, []);
 
-    const fetchCharacters = async () => {
+    const getCharacters = async () => {
         try {
             const response = await axios.get('https://swapi.dev/api/people/');
             const firstsCharacters = response.data.results.slice(0, 5);
@@ -47,29 +46,35 @@ const CharactersList = () => {
 
     return (
         <div className="characters-list-container">
-            <h1> Star Wars - Characters list</h1>
-            <div className={`card-list ${isLoading ? "loading" : ""}`}>
-            {isLoading ? ( <LoadingSpaceship />
-             ) : (
-             <>
-                {characters.map((character, index) => (
-                    <div className="character-card" key={index}> 
-                        <h2 className="character-name">{character.name}</h2>
-                        <p><strong> Année de naissance:</strong> {character.birth_year}</p>
-                        <p><strong> Genre:</strong> {character.gender}</p>
-                        <Link to={`/character/${character.name.replace(/\s+/g, '-').toLowerCase()}`}>Plus d'informations</Link>
-                    </div>
-                ))}
-            {showLoadMore && (
-              <button className={`load-more-btn ${isLoading ? "loading" : ""}`} onClick={moreCharacters}>
-                Load more
-              </button>
-            )}
-          </>
-        )}
-      </div>
-    </div>
-    );
+          {isLoading ? null : <h1> Star Wars - Characters list</h1>}
+          <div className={`card ${isLoading ? "loading-container" : ""}`}>
+            {isLoading ? (
+                <div className="loading-wrapper">
+                    <LoadingSpaceship />
+                </div>
+                ) : (
+              <>
+                <div className="k-card">
+                    {characters.map((character, index) => (
+                    <CharacterCard key={index} character={character} />
+                    ))}
+                </div>
+              </>
+             )}
+          </div>
+            
+            <div className="btn-a-centrer">
+                {showLoadMore && (
+                  <button
+                  className={`load-more-btn ${isLoading ? "loading-container" : ""}`}
+                  onClick={moreCharacters}
+                >
+                  Load more
+                </button>
+                )}
+          </div>
+        </div>
+      );      
 };
 
 export default CharactersList;

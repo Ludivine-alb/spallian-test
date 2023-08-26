@@ -1,0 +1,53 @@
+.search-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.search-input::placeholder {
+    color: black;
+}
+
+.suggestions {
+    position: absolute;
+    top: 10%;
+    left: 79%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .planet-title, .movies-title {
+      color: white;
+      padding: 10%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    color: white;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .search-toggle {
+        display: none;
+      }
+
+    .search-bar {
+         display: none;
+    }
+  }

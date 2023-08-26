@@ -1,0 +1,51 @@
+.planet-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .planet-card-details {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 70%;
+    border-radius: 30px !important;
+  }
+  
+  .planet-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .planet-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .planet-info {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .planet-card-details {
+      width: 90%;
+    }
+  
+    .planet-content {
+      flex-direction: column;
+    }
+  
+    .planet-image {
+      margin-bottom: 10px;
+    }
+  }
+  

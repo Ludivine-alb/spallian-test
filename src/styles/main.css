@@ -1,0 +1,7 @@
+body* {
+    height: max-content;
+}
+
+html {
+    height: 100vh !important;
+}

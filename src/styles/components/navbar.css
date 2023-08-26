@@ -1,0 +1,132 @@
+/* navbar.css */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 70px;
+  }
+
+  .navbar-logo {
+    width: 60%;
+  }
+
+  .suggestions {
+    position: absolute;
+    top: 10%;
+    left: 79%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .white-mode-toggle label {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .white-mode-toggle input {
+    margin-right: 5px;
+  }
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 10;
+  }
+  .burger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  
+  .burger-menu.open .burger-bar:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-menu.open .burger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-bar:last-child {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      display: none;
+      gap: 10px;
+    }
+  
+    .burger-menu {
+      display: inline-block;
+    }
+  
+    .navbar.mobile-active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      padding: 20px;
+    }
+    .mobile-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(-100%);
+    }
+    
+    .mobile-active .mobile-links {
+      transform: translateY(0);
+    }
+    
+    .mobile-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .mobile-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .search-bar.mobile-search-hide {
+      display: none;
+    }
+  }

@@ -1,4 +1,14 @@
-/* loading-spaceship.css */
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
 
 .loading-bar-and-percentage {
   display: flex;
@@ -6,16 +16,15 @@
 }
 
 .loading-bar {
-  background-color: red;
+  background-color: #ffa500;
   height: 13px;
   width: 100%;
-  transition: width 0.2s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .loading-percentage {
-  margin-left: 10px; /* Ajustez la marge pour l'espacement */
+  margin-left: 10px;
   padding-bottom: 4px;
-  position: absolute;
   font-weight: bold;
   font-size: small;
 }

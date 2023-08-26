@@ -1,24 +1,71 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+
+@media only screen and (min-width: 820px) and (max-width: 1100px) {
+        .characters-list-container {
+            align-content: center;
+            flex-wrap: wrap;
+            }
+            .btn-a-centrer {
+            margin-left: 20%;
+        }
+    }
+
+  @media only screen and (min-width: 300px) and (max-width: 800px) {
+    .characters-list-container {
+        align-content: flex-end;
+        flex-wrap: wrap;
+      }
+      .btn-a-centrer {
+        margin-left: 20%;
+    }
+  }
+
+.btn-a-centrer {
+    margin-left: 4%;
+}
+
 .characters-list-container {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre horizontalement les éléments */
-    justify-content: flex-start; /* Centre verticalement les éléments */
-    min-height: 100vh;
-    margin: 0;
-    padding-top: 10vh;
-    padding-bottom: 10vh; /* Utilisez une hauteur de 100vh pour occuper toute la hauteur de l'écran */
+    align-items: flex-start;
+    text-align: center;
+    color: white;
+    gap: 20px;
   }
   
-  .characters-list-title {
-    margin-top: 16px;
-    padding-bottom: 10vh; /* Ajoute un espace entre l'icône et le titre */
+  .card {
+      width: max-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex: 1;
+  }
+
+  .hover-effect {
+    transform: scale(1.06);
   }
   
-  .card-list {
-    /* Ajoutez d'autres styles pour votre liste de personnages ici */
+  .load-more-btn,
+  .character-card-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
   }
   
-  .loading {
-    /* Styles pour le chargement */
-  }
-  
+  .load-more-btn:hover,
+  .character-card-button:hover {
+    background-color: #ffca28;
+  }  
