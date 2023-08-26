@@ -1,17 +1,26 @@
 /* navbar.css */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 70px;
-  }
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 70px;
+}
 
-  .navbar-logo {
-    width: 60%;
-  }
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 9%;
+}
 
+.navbar-logo {
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
+  
   .suggestions {
     position: absolute;
     top: 10%;
@@ -31,15 +40,7 @@
     text-decoration: none;
     font-weight: bold;
   }
-  
-  .white-mode-toggle label {
-    color: white;
-    margin-right: 10px;
-  }
-  
-  .white-mode-toggle input {
-    margin-right: 5px;
-  }
+
   .burger-menu {
     display: none;
     cursor: pointer;
@@ -86,32 +87,16 @@
       display: inline-block;
     }
   
-    .navbar.mobile-active {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 999;
-      padding: 20px;
-    }
+    
     .mobile-links {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      align-content: center;
+      align-items: flex-start;
       background-color: rgba(0, 0, 0, 0.7);
-      left: 0;
       width: 100%;
       padding: 20px;
-      transition: transform 0.3s ease-in-out;
-      transform: translateY(-100%);
-    }
-    
-    .mobile-active .mobile-links {
       transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
     }
     
     .mobile-links ul {
@@ -127,6 +112,9 @@
     }
     
     .search-bar.mobile-search-hide {
+      display: none;
+    }
+    .navbar-logo-container {
       display: none;
     }
   }

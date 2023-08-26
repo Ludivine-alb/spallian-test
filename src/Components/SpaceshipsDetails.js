@@ -3,7 +3,7 @@ import React from "react";
 const SpaceshipsDetails = ({ spaceshipsDetails }) => {
     return (
         <div>
-            <h3> Spaceships informations: </h3>
+            <h3> Related starships: </h3>
             {spaceshipsDetails.length > 0 ? (
                 <ul>
                     {spaceshipsDetails.map((spaceship, index) => (

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import SearchComponent from "./SearchComponent";
 import LoadingSpaceship from "./LoadingSpaceship";
-import burgerIcon from '../assets/icons/death-star.svg';
+import burgerIcon from '../assets/icons/Death-star1.svg';
 import "../styles/components/navbar.css"
 
 const Navbar = () => {
@@ -14,6 +14,10 @@ const Navbar = () => {
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
+
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false);
+      };
 
     const fetchContent = async () => {
         try {
@@ -35,30 +39,30 @@ const Navbar = () => {
         <>
             {!isLoading && (
         <div className="navbar" >
-          <div className="navbar-logo">
-            <img src={burgerIcon} alt="Logo" />
+          <div className="navbar-logo-container">
+            <img src={burgerIcon} alt="Logo"  className="navbar-logo"/>
           </div>
           <button className={`burger-menu ${mobileMenuOpen ? "open" : ""}`} onClick={toggleMobileMenu}>
-        <div className="burger-bar"></div>
-        <div className="burger-bar"></div>
-        <div className="burger-bar"></div>
-      </button>
+            <div className="burger-bar"></div>
+            <div className="burger-bar"></div>
+            <div className="burger-bar"></div>
+         </button>
           <ul className={`navbar-links ${mobileMenuOpen ? "mobile-links" : ""}`}>
             <li>
-              <Link to="/">Characters</Link>
+              <Link to="/" onClick={closeMobileMenu}>Characters</Link>
             </li>
             <li>
-              <Link to="/movies">Movies</Link>
+              <Link to="/movies" onClick={closeMobileMenu}>Movies</Link>
             </li>
             <li>
-              <Link to="/planets">Planets</Link>
+              <Link to="/planets" onClick={closeMobileMenu}>Planets</Link>
             </li>
             <li>
-              <Link to="/starships">Starships</Link>
+              <Link to="/starships" onClick={closeMobileMenu}>Starships</Link>
             </li>
           </ul>
           <div className={`search-bar ${mobileMenuOpen ? "mobile-search-hide" : ""}`}>
-          <SearchComponent />
+            <SearchComponent />
           </div>
         </div>
             )}

@@ -25,7 +25,7 @@ const getStarships = async () => {
 
 return (
     <div className="starships-list-container">
-        <h1>Starships</h1>
+        <h1 className="list-title">Starships</h1>
         <div className="starships-grid">
             {starships.map((starship, index) => (
                 <StarshipCard key={index} starship={starship} starshipId={starship.id}/>

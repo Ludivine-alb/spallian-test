@@ -35,10 +35,7 @@
     margin-top: 20px;
   }
   
-  @media only screen and (max-width: 800px) {
-    .planet-card-details {
-      width: 90%;
-    }
+  @media only screen and (max-width: 1200px) {
   
     .planet-content {
       flex-direction: column;
@@ -48,4 +45,11 @@
       margin-bottom: 10px;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    .planet-card-details a {
+        margin: 0;
+    }
+}
+
   

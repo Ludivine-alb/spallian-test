@@ -3,7 +3,7 @@ import React from "react";
 const VehiclesDetails = ({ vehiclesDetails }) => {
     return (
         <div>
-            <h3> Vehicles details: </h3>
+            <h3> Related vehicles: </h3>
             {vehiclesDetails.length > 0 ? (
                 <ul>
                     {vehiclesDetails.map((vehicle, index) => (

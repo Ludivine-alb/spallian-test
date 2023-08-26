@@ -14,6 +14,7 @@ const CharactersList = () => {
     useEffect(() => {
         getCharacters();
     }, []);
+    
 
     const getCharacters = async () => {
         try {
@@ -45,35 +46,34 @@ const CharactersList = () => {
     };
 
     return (
-        <div className="characters-list-container">
-          {isLoading ? null : <h1> Star Wars - Characters list</h1>}
-          <div className={`card ${isLoading ? "loading-container" : ""}`}>
-            {isLoading ? (
-                <div className="loading-wrapper">
-                    <LoadingSpaceship />
-                </div>
-                ) : (
-              <>
-                <div className="k-card">
-                    {characters.map((character, index) => (
-                    <CharacterCard key={index} character={character} />
-                    ))}
-                </div>
-              </>
-             )}
+      <div className="characters-page-container">
+      <div className="characters-list-container">
+      {!isLoading && <h1 className="list-title">Characters</h1>}
+      <div className={`${isLoading ? "loading-container" : ""}`}>
+        {isLoading ? (
+          <div className="loading-wrapper">
+            <LoadingSpaceship />
           </div>
-            
-            <div className="btn-a-centrer">
-                {showLoadMore && (
-                  <button
-                  className={`load-more-btn ${isLoading ? "loading-container" : ""}`}
-                  onClick={moreCharacters}
-                >
-                  Load more
-                </button>
-                )}
-          </div>
-        </div>
+        ) : (
+          <>
+          <div className="characters-grid">
+            {characters.map((character, index) => (
+              <CharacterCard key={index} character={character} />
+            ))}
+            </div>
+          </>
+        )}
+      </div>
+      <div className={`btn-a-centrer ${isLoading ? "loading-container" : ""}`}>
+        {showLoadMore && (
+          <button className="load-more-btn" onClick={moreCharacters}>
+            Load more
+          </button>
+        )}
+      </div>
+    </div>
+    </div>
+    
       );      
 };
 

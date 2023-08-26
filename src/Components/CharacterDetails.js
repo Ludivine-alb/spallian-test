@@ -111,13 +111,14 @@ const CharacterDetails = () => {
                      <img src={characterImage} alt={CharacterDetails.name} />
                     </div>
                     <div className="character-info">
-                     <p><strong>Eye color:</strong> {CharacterDetails.eye_color}</p>
-                     <p><strong>Homeworld:</strong> {homeworldName}</p>
-                     <p><strong>Hair color:</strong> {CharacterDetails.hair_color}</p>
-                     <p><strong>Skin color:</strong> {CharacterDetails.skin_color}</p>
-                     <p><strong>Height:</strong> {CharacterDetails.height}</p>
-                     <p><strong>Mass:</strong> {CharacterDetails.mass}</p>
-                     <Link to="/">Revenir à la liste des personnages</Link>
+                        <p><strong>Name: </strong> {CharacterDetails.name} </p>
+                     <p><strong>Eye color: </strong> {CharacterDetails.eye_color}</p>
+                     <p><strong>Homeworld: </strong> {homeworldName}</p>
+                     <p><strong>Hair color: </strong> {CharacterDetails.hair_color}</p>
+                     <p><strong>Skin color: </strong> {CharacterDetails.skin_color}</p>
+                     <p><strong>Height: </strong> {CharacterDetails.height}</p>
+                     <p><strong>Mass: </strong> {CharacterDetails.mass}</p>
+                     <Link className="btn-back" to="/">Back to characters</Link>
                      </div>
                     </div>
                  </div>
@@ -127,6 +128,7 @@ const CharacterDetails = () => {
                         </div>
 
                         <div className="character-special-card">   
+                        <h3> Related movies: </h3>
                         <ul>
         {characterMoviesDetails.map((film, index) => (
             <li key={index}>{film.title} - {film.release_date}</li>
@@ -144,3 +146,46 @@ const CharacterDetails = () => {
 }
 
 export default CharacterDetails;
+
+
+
+
+
+// <div className="all-character-details">
+//                      <h1> Starships details :</h1>
+//                     <ul>
+//                         {CharacterSpaceshipsDetails.map(spaceship => (
+//                         <li key={spaceship.url}>{spaceship.name}</li>
+//                         ))}
+//                     </ul>
+
+//                     <h1> Vehicles details :</h1>
+//                     <ul>
+//                         {CharacterVehiclesDetails.map(vehicle => (
+//                         <li key={vehicle.url}>{vehicle.name}</li>
+//                         ))}
+//                     </ul>
+
+//                     <h1> Movies details :</h1>
+//                     <ul>
+//                         {characterMoviesDetails.map(movie => (
+//                         <li key={movie.url}>{movie.title}</li>
+//                         ))}
+//                     </ul>
+//                     </div>
+//                      <Link to="/">Revenir à la liste des personnages</Link>
+//                      </div>
+//                     </div>
+//                  </div>
+//                      <div className="character-special-cards">
+//                         <div className="character-special-card">
+//                             <SpaceshipsDetails spaceshipsDetails={CharacterSpaceshipsDetails} />
+//                         </div>
+
+//                         <div className="character-special-card">   
+//                         <ul>
+//         {characterMoviesDetails.map((film, index) => (
+//             <li key={index}>{film.title} - {film.release_date}</li>
+//         ))}
+//     </ul>
+//                         </div>

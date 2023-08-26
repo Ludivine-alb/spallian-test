@@ -37,9 +37,10 @@ const MovieDetails = () => {
               </div>
               <div className="movie-info">
                 <h2>{movieDetails?.title}</h2>
-                <p>{movieDetails?.opening_crawl}</p>
-                <p><strong>Director:</strong> {movieDetails?.director}</p>
-                <p><strong>Release Date:</strong> {movieDetails?.release_date}</p>
+                <p><strong>Opening Crawl: </strong>{movieDetails?.opening_crawl}</p>
+                <p><strong>Director: </strong> {movieDetails?.director}</p>
+                <p><strong>Producer: </strong> {movieDetails?.producer}</p>
+                <p><strong>Release Date: </strong> {movieDetails?.release_date}</p>
               <Link to="/movies">Back to Movies List</Link>
               </div>
             </div>
