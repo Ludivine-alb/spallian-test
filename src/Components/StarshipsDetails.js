@@ -52,7 +52,7 @@ const StarshipsDetails = () => {
                 <p><strong>Hyperdrive Rating: </strong> {starshipDetails?.hyperdrive_rating}</p>
                 <p><strong>MGLT : </strong> {starshipDetails?.MGLT}</p>
                 <p><strong>Starship Class : </strong> {starshipDetails?.starship_class}</p>
-              <Link to="/starships">Back to Starships List</Link>
+              <Link className="btn-back" to="/starships">Back to Starships List</Link>
               </div>
             </div>
             <div className="back-link">

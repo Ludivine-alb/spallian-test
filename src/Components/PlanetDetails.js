@@ -45,7 +45,7 @@ const PlanetDetails = () => {
                 <p><strong>Terrain: </strong>{planetDetails?.terrain}</p>
                 <p><strong>Surface water: </strong>{planetDetails?.surface_water}</p>
                 <p><strong>Population: </strong>{planetDetails?.population}</p>
-                <Link to="/planets">Back to Planets List</Link>
+                <Link className="btn-back" to="/planets">Back to Planets List</Link>
               </div>
             </div>
             <div className="back-link">

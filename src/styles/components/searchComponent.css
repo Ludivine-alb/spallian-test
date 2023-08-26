@@ -21,9 +21,14 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  .planet-title, .movies-title {
+  .movies-title {
       color: white;
       padding: 10%;
+  }
+
+  h2.planet-title {
+    color: white;
+    padding: 10%;
   }
 
   ul {
@@ -32,13 +37,13 @@
     margin: 0;
   }
 
-  li {
+  .suggestion-list {
     color: white;
     padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  li:last-child {
+  .suggestion-list:last-child {
     border-bottom: none;
   }
 

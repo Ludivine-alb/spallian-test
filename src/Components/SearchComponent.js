@@ -102,7 +102,7 @@ const SearchComponent = () => {
             <h2 className="movies-title">Movies</h2>
             <ul>
               {suggestions.films.map((suggestion) => (
-                <li key={suggestion.title}>{suggestion.title}</li>
+                <li className="suggestion-list" key={suggestion.title}>{suggestion.title}</li>
               ))}
             </ul>
           </div>

@@ -41,7 +41,7 @@ const MovieDetails = () => {
                 <p><strong>Director: </strong> {movieDetails?.director}</p>
                 <p><strong>Producer: </strong> {movieDetails?.producer}</p>
                 <p><strong>Release Date: </strong> {movieDetails?.release_date}</p>
-              <Link to="/movies">Back to Movies List</Link>
+              <Link className="btn-back" to="/movies">Back to Movies List</Link>
               </div>
             </div>
             <div className="back-link">
