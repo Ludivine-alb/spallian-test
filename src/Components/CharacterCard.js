@@ -20,7 +20,7 @@ const CharacterCard = ({ character }) => {
             <h2>{character.name}</h2>
             <p><strong>Birth date: </strong> {character.birth_year}</p>
             <p><strong>Gender: </strong> {character.gender}</p>
-            <Link className="link-btn" to={`/character/${character.name.replace(/\s+/g, '-').toLowerCase()}`}>See more</Link>
+            <Link className="link-btn" to={`/character/${character.name.replace(/\s+/g, '-').toLowerCase()}`}>View details</Link>
         </div>
         </div>
     );

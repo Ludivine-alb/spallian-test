@@ -19,6 +19,8 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;
+    text-decoration: none;
+    font-size: 12px;
 }
 
 .movie-title {
